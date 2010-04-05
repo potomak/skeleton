@@ -1,8 +1,10 @@
 <html>
 <head>
   <title>Skeleton</title>
+  <%= stylesheet_link_tag :all, :cache => true %>
 </head>
 <body>
-  <h1>Skeleton</h1>
+  <%= render :partial => "shared/header" %>
   <%= yield %>
+  <%= render :partial => "shared/footer" %>
 </body>

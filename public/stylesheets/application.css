@@ -1,0 +1,55 @@
+body {
+	font-family: Helvetica;
+}
+
+a,
+a:active,
+a:visited {
+	color: #090;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #090;
+	text-decoration: underline;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	float: left;
+	margin-right: 10px;
+}
+
+li.last {
+	float: left;
+	margin-right: 0;
+}
+
+input[type=text],
+input[type=password] {
+	border: #ccc 1px solid;
+}
+
+label {
+	display: block;
+}
+
+#errorExplanation {
+	background-color: #ff6;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+#errorExplanation li {
+	float: none;
+	margin-right: 0;
+}
+
+.fieldWithErrors input {
+	border: 1px solid #f00;
+}
