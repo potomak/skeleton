@@ -2,6 +2,8 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  before_filter :mailer_set_url_options
+
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
@@ -18,13 +20,24 @@ class ApplicationController < ActionController::Base
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.user
   end
-  
+
   def require_user
     unless current_user
       store_location
       flash[:notice] = "You must be logged in to access this page"
       redirect_to new_user_session_url
       return false
+    end
+  end
+
+  def require_same_user
+    return false if false == require_user
+
+    if params[:user_id].blank? || (params[:user_id].to_i == current_user.id.to_i)
+      @user = current_user
+    else
+      redirect_to "/"
+      false
     end
   end
 
@@ -44,5 +57,9 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
+  end
+
+  def mailer_set_url_options
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 end

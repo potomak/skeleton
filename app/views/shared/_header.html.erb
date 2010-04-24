@@ -1,11 +1,13 @@
-<h1><%= link_to "Skeleton", root_path %></h1>
-<ul class="main_menu">
-  <% if current_user %>
-    <li>Hi <%= current_user.email %></li>
-    <li><%= link_to "Logout", logout_path %></li>
-  <% else %>
-    <li><%= link_to "Login", login_path %></li>
-    <li><%= link_to "Sign up", new_account_path %></li>
-  <% end %>
-  <div style="clear: both"></div>
-</ul>
+<div id="header">
+  <h1><%= link_to "Skeleton", root_path %></h1>
+  <ul class="main_menu">
+    <% if current_user %>
+      <li>Hi <%= current_user.email %></li>
+      <li><%= link_to "Logout", logout_path %></li>
+    <% else %>
+      <li><%= link_to "Login", login_path %></li>
+      <li><%= link_to "Sign up", new_account_path %></li>
+    <% end %>
+    <div style="clear: both"></div>
+  </ul>
+</div>

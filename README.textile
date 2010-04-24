@@ -1,0 +1,3 @@
+h2. Welcome to Skeleton
+
+This is a simple Rails skeleton application implementing basic authentication using the Authlogic gem.

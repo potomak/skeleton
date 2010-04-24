@@ -4,10 +4,15 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   
   map.resource :account, :controller => "users"
-  map.resources :users
+  map.resources :users do |user|
+    user.resend_activation "/resend_activation", :controller => "users", :action => "resend_activation"
+  end
   
-  map.login "login", :controller => "user_sessions", :action => "new"
-  map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  map.register "/register/:activation_code", :controller => 'activations', :action => 'new'
+  map.activate "/activate/:id", :controller => 'activations', :action => 'create'
+  
+  map.login  "/login", :controller => "user_sessions", :action => "new"
+  map.logout "/logout", :controller => "user_sessions", :action => "destroy"
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'

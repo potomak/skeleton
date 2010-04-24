@@ -12,3 +12,6 @@
   <br />
   <%= f.submit "Login" %>
 <% end %>
+<% unless @user.nil? %>
+<p><%= link_to "Resend activation email", user_resend_activation_path(@user) %></p>
+<% end %>

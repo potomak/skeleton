@@ -2,9 +2,16 @@
 <head>
   <title>Skeleton</title>
   <%= stylesheet_link_tag :all, :cache => true %>
+  <%= javascript_include_tag :all, :cache => true %>
 </head>
 <body>
   <%= render :partial => "shared/header" %>
+  
+  <% flash.each do |key, msg| %>
+    <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_ #{key}" %>
+  <% end %>
+  
   <%= yield %>
+  
   <%= render :partial => "shared/footer" %>
 </body>

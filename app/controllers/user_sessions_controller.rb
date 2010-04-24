@@ -8,6 +8,11 @@ class UserSessionsController < ApplicationController
 
   def create
     @user_session = UserSession.new(params[:user_session])
+    
+    unless params[:user_session].nil?
+      @user = User.find_by_email(params[:user_session][:email])
+    end
+    
     if @user_session.save
       flash[:notice] = "Login successful!"
       redirect_back_or_default account_url
