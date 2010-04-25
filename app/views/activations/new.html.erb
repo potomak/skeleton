@@ -1,6 +1,7 @@
 <h2>Activate your account</h2>
 
-<% form_for @user, :url => activate_path(@user.id), :html => { :method => :post } do |f| %>
-	<%= f.error_messages %>
-	<%= f.submit "Activate" %>
+<% form_for @user, :url => activate_path(@user.id), :html => { :method => :post } do |form| %>
+  <%= form.error_messages %>
+  <%= render :partial => "form", :locals => { :form => form }%>
+  <%= form.submit "Activate" %>
 <% end %>
