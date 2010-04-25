@@ -2,54 +2,81 @@ body {
 	font-family: Helvetica;
 }
 
+/* anchors */
 a,
 a:active,
 a:visited {
 	color: #090;
 	text-decoration: none;
 }
-
 a:hover {
 	color: #090;
 	text-decoration: underline;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-li {
-	float: left;
-	margin-right: 10px;
-}
-
-li.last {
-	float: left;
-	margin-right: 0;
-}
-
+/* form elements */
 input[type=text],
 input[type=password] {
 	border: #ccc 1px solid;
 }
-
 label {
 	display: block;
 }
 
+/* errors */
 #errorExplanation {
 	background-color: #ff6;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 10px;
 }
-
 #errorExplanation li {
 	float: none;
 	margin-right: 0;
 }
-
 .fieldWithErrors input {
 	border: 1px solid #f00;
+}
+/* flash */
+.message.notice {
+	background-color: #84F43B;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+/* header */
+#header {}
+#header h1 {
+	background-image:url(/images/skeleton.gif);
+	background-repeat:no-repeat;
+	float:left;
+	height:39px;
+	margin:0;
+	padding-left:50px;
+	padding-top:5px;
+}
+#header ul {
+	float:right;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#header li {
+	float: left;
+	margin-right: 10px;
+}
+#header li.last {
+	float: left;
+	margin-right: 0;
+}
+
+/* footer */
+#footer {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 50px;
+}
+#footer p {
+	margin: 0;
 }

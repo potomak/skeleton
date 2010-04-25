@@ -8,7 +8,7 @@
   <%= render :partial => "shared/header" %>
   
   <% flash.each do |key, msg| %>
-    <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_ #{key}" %>
+    <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
   <% end %>
   
   <%= yield %>

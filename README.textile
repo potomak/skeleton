@@ -1,3 +1,6 @@
 h2. Welcome to Skeleton
 
 This is a simple Rails skeleton application implementing basic authentication using the Authlogic gem.
+
+* Authlogic basic implementation (see "http://github.com/binarylogic/authlogic_example":http://github.com/binarylogic/authlogic_example)
+* Aser activation (see "http://github.com/matthooks/authlogic-activation-tutorial":http://github.com/matthooks/authlogic-activation-tutorial)
