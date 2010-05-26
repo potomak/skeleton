@@ -1,6 +1,17 @@
 h2. Welcome to Skeleton
 
-This is a simple Rails skeleton application implementing basic authentication using the Authlogic gem.
+This is a simple Rails skeleton application implementing common features.
+
+h3. Basic authentication using the Authlogic gem
 
 * Authlogic basic implementation (see "http://github.com/binarylogic/authlogic_example":http://github.com/binarylogic/authlogic_example)
-* Aser activation (see "http://github.com/matthooks/authlogic-activation-tutorial":http://github.com/matthooks/authlogic-activation-tutorial)
+* User activation (see "http://github.com/matthooks/authlogic-activation-tutorial":http://github.com/matthooks/authlogic-activation-tutorial)
+
+h3. Behavior Driven Development using RSpec
+
+* RSpec Rails plugin (see "http://rspec.info/rails/":http://rspec.info/rails/)
+* Install rspec and rspec-rails plugins for Rails >= 2.1.0 (see "http://wiki.github.com/dchelimsky/rspec/rails":http://wiki.github.com/dchelimsky/rspec/rails)
+
+h3. jQuery support using jRails plugin
+
+* jRails plugin (see "http://github.com/aaronchi/jrails":http://github.com/aaronchi/jrails)
