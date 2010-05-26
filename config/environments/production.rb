@@ -26,3 +26,15 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+c = YAML::load(File.open("#{RAILS_ROOT}/config/email.yml"))
+
+config.action_mailer.smtp_settings = {
+  :address => c[RAILS_ENV]['server'],
+  :port => c[RAILS_ENV]['port'],
+  :domain => c[RAILS_ENV]['domain'],
+  :user_name => c[RAILS_ENV]['username'],
+  :password => c[RAILS_ENV]['password'],
+  :authentication => c[RAILS_ENV]['authentication'],
+  :enable_starttls_auto => c[RAILS_ENV]['enable_starttls_auto'] || false
+}

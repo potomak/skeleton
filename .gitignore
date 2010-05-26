@@ -4,5 +4,6 @@ db/*.sqlite3
 db/schema.rb
 tmp/**/*
 config/database.yml
+config/email.yml
 .DS_Store
 mkmf.log
